@@ -4,5 +4,18 @@
     <a routerLink="/details/{{hero.id}}">
       <span class="name">{{hero.name}}</span>
     </a>
+    <button
+      type="button"
+      class="delete"
+      title="delete hero"
+      (click)="delete(hero)"
+    >x</button>
   </li>
 </ul>
+<div>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName>
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add Hero
+  </button>
+</div>
